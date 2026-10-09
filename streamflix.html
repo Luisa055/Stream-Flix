@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamCover - Filmes e Séries</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #141414;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+    }
+
+    .logo {
+      color: #E50914;
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #e5e5e5;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #b3b3b3;
+    }
+
+    /* Hero Banner */
+    .hero {
+      height: 80vh;
+      background: linear-gradient(to top, #141414, transparent 50%),
+                  linear-gradient(to right, rgba(0,0,0,0.8), transparent 60%),
+                  url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1600&q=80') center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 50px;
+    }
+
+    .hero-title {
+      font-size: 48px;
+      margin-bottom: 15px;
+      max-width: 600px;
+    }
+
+    .hero-description {
+      font-size: 16px;
+      color: #cccccc;
+      max-width: 500px;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 10px 24px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: opacity 0.2s;
+    }
+
+    .btn-primary {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .btn-secondary {
+      background-color: rgba(109, 109, 110, 0.7);
+      color: #ffffff;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    /* Seções e Carrossel */
+    .content-row {
+      padding: 20px 50px;
+    }
+
+    .row-title {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #e5e5e5;
+    }
+
+    .cards-container {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 10px 0;
+      scroll-behavior: smooth;
+    }
+
+    .cards-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      min-width: 200px;
+      height: 120px;
+      background-color: #2f2f2f;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card:hover {
+      transform: scale(1.08);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">StreamCover</div>
+    <ul class="nav-links">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Séries</a></li>
+      <li><a href="#">Filmes</a></li>
+      <li><a href="#">Bombando</a></li>
+      <li><a href="#">Minha Lista</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1 class="hero-title">O Resgate Intergaláctico</h1>
+    <p class="hero-description">Uma jornada épica além das estrelas para salvar a última colônia humana de uma ameaça desconhecida.</p>
+    <div class="hero-buttons">
+      <button class="btn btn-primary">▶ Assistir</button>
+      <button class="btn btn-secondary">ℹ Mais Informações</button>
+    </div>
+  </header>
+
+  <section class="content-row">
+    <h2 class="row-title">Em Alta</h2>
+    <div class="cards-container">
+      <div class="card"><img src="https://picsum.photos/300/200?random=1" alt="Capa 1"></div>
+      <div class="card"><img src="https://picsum.photos/300/200?random=2" alt="Capa 2"></div>
+      <div class="card"><img src="https://picsum.photos/300/200?random=3" alt="Capa 3"></div>
+      <div class="card"><img src="https://picsum.photos/300/200?random=4" alt="Capa 4"></div>
+      <div class="card"><img src="https://picsum.photos/300/200?random=5" alt="Capa 5"></div>
+      <div class="card"><img src="https://picsum.photos/300/200?random=6" alt="Capa 6"></div>
+    </div>
+  </section>
+
+  <section class="content-row">
+    <h2 class="row-title">Séries de Ação</h2>
+    <div class="cards-container">
+      <div class="card"><img src="https://picsum.photos/300/200?random=7" alt="Capa 7"></div>
+      <div class="card"><img src="https://picsum.photos/300/200?random=8" alt="Capa 8"></div>
+      <div class="card"><img src="https://picsum.photos/300/200?random=9" alt="Capa 9"></div>
+      <div class="card"><img src="https://picsum.photos/300/200?random=10" alt="Capa 10"></div>
+      <div class="card"><img src="https://picsum.photos/300/200?random=11" alt="Capa 11"></div>
+      <div class="card"><img src="https://picsum.photos/300/200?random=12" alt="Capa 12"></div>
+    </div>
+  </section>
+
+</body>
+</html>
